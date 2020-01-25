@@ -11,7 +11,7 @@ const Header = ({ showRefreshButton, handleRefresh }) => (
       <h1
         className="header__content__title"
       >
-        Lunchroulette
+        'Round Town Chow
       </h1>
 
       {showRefreshButton &&

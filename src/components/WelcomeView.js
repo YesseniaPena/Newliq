@@ -44,9 +44,9 @@ const WelcomeView = ({ handleStart }) => (
 
     <a
       className="simple-view__footer"
-      href="http://soyguijarro.com"
+      href="http://roundtownchow.com"
     >
-      Made by @soyguijarro
+      Made by Iseanee DeShazer
     </a>
   </main>
 );

@@ -24,7 +24,7 @@ body,
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #616161;
+  color: white;
   background-color: #9E9E9E;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@ a {
   width: 100%;
   height: 3.5rem;
   color: #FFFFFF;
-  background-color: #1E88E5;
+  background-color: Orange;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@ a {
 
 .simple-view,
 .loading {
-  background-color: #FFFFFF;
+  background-color: grey;
   justify-content: center;
   text-align: center;
 }
@@ -131,7 +131,7 @@ a {
 
 .simple-view__title__icon,
 .loading__icon {
-  color: #BDBDBD;
+  color: white;
   font-size: 3.5em;
   margin-left: -0.1em;
 }
@@ -146,13 +146,13 @@ a {
   border: none;
   text-transform: uppercase;
   font-weight: 600;
-  color: #607D8B;
+  color: orange;
   padding: 1rem;
   cursor: pointer;
 }
 
 .simple-view__footer {
-  color: #9E9E9E;
+  color: white;
   font-size: 0.8em;
   text-decoration: none;
   padding: 1.2em 0.75em;
