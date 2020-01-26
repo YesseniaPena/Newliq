@@ -13,18 +13,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/soyguijarro/lunchroulette.git"
+    "url": "https://github.com/naed15/lunchroulette.git"
   },
   "author": {
-    "name": "Ramón Guijarro",
-    "email": "hola@soyguijarro.com",
-    "url": "http://soyguijarro.com"
+    "name": "Iseanee DeShazer",
+    "email": "naedeshazer1@gmail.com",
+    "url": "http://roundtownchow.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/soyguijarro/lunchroulette/issues"
+    "url": "https://github.com/naed15/lunchroulette/issues"
   },
-  "homepage": "https://soyguijarro.github.io/lunchroulette",
+  "homepage": "https://naed15.github.io/lunchroulette",
   "dependencies": {
     "normalize.css": "7.0.0",
     "react": "15.6.1",

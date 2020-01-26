@@ -37,7 +37,7 @@ const WelcomeView = ({ handleStart }) => (
           className="simple-view__body__button"
           onClick={handleStart}
         >
-          I'm feeling lucky
+          Chow Now 
         </button>
       </div>
     </div>

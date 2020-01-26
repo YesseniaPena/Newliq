@@ -142,7 +142,7 @@ a {
 }
 
 .simple-view__body__button {
-  background: none;
+  background: white;
   border: none;
   text-transform: uppercase;
   font-weight: 600;
