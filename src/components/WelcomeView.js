@@ -44,7 +44,7 @@ const WelcomeView = ({ handleStart }) => (
 
     <a
       className="simple-view__footer"
-      href="http://roundtownchow.com"
+      href="http://roundtownchow.netlify.com"
     >
       Made by Iseanee DeShazer
     </a>
