@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 
 import Header from './Header';
 import WelcomeView from './WelcomeView';
-import RestaurantView from './RestaurantView';
+import liquor_storeView from './liquor_storeView';
 import LoadingView from './LoadingView';
 import ErrorView from './ErrorView';
 
 import getRandomItemFromArray from '../utils/getRandomItemFromArray';
 import requestCurrentLocation from '../utils/requestCurrentLocation';
 import {
-  getRestaurantId,
-  parseRestaurantData,
+  getliquor_storeId,
+  parseliquor_storeData,
   parseDistanceData
 } from '../api/googleAPIResponseParser';
 import {
-  requestNearbyRestaurants,
-  requestRestaurantDetails,
-  requestRestaurantDistance
+  requestNearbyliquor_store,
+  requestliquor_storeDetails,
+  requestliquor_storeDistance,
 } from '../api/googleAPIRequester';
 import { ERRORS } from '../constants';
 
@@ -30,52 +30,52 @@ class App extends Component {
       isGettingLocation: false,
       isFetchingData: false,
       areNoResults: false,
-      restaurant: null
+      liquor_store: null
     };
 
-    this.checkIfCurrentRestaurant = this.checkIfCurrentRestaurant.bind(this);
-    this.requestRandomRestaurant = this.requestRandomRestaurant.bind(this);
-    this.getRandomRestaurantNearby = this.getRandomRestaurantNearby.bind(this);
+    this.checkIfCurrentliquor_store = this.checkIfCurrentliquor_store.bind(this);
+    this.requestRandomliquor_store = this.requestRandomliquor_store.bind(this);
+    this.getRandomliquor_storeNearby = this.getRandomliquor_storeNearby.bind(this);
   }
 
-  setRestaurantData(restaurant, distance) {
+  setliquor_storeData(liquor_store, distance) {
     this.setState({
-      restaurant: {
-        ...parseRestaurantData(restaurant),
+      liquor_store: {
+        ...parseliquor_storeData(liquor_store),
         ...parseDistanceData(distance)
       },
       isFetchingData: false
     });
   }
 
-  checkIfCurrentRestaurant(restaurant) {
-    const { restaurant: currentRestaurant } = this.state;
+  checkIfCurrentliquor_store(liquor_store) {
+    const { liquor_store: currentliquor_store } = this.state;
 
-    const isCurrentRestaurant = currentRestaurant &&
-      getRestaurantId(restaurant) === currentRestaurant.id;
+    const isCurrentliquor_store = currentliquor_store &&
+      getliquor_storeId(liquor_store) === currentliquor_store.id;
 
-    if (isCurrentRestaurant) return Promise.reject(ERRORS.SEARCH_AGAIN);
-    return restaurant;
+    if (isCurrentliquor_store) return Promise.reject(ERRORS.SEARCH_AGAIN);
+    return liquor_store;
   }
 
-  requestRandomRestaurant(coordinates) {
+  requestRandomliquor_store(coordinates) {
     this.setState({
       isGettingLocation: false,
       isFetchingData: true,
       areNoResults: false
     });
 
-    requestNearbyRestaurants(coordinates)
+    requestNearbyliquor_store(coordinates)
       .then(getRandomItemFromArray)
-      .then(this.checkIfCurrentRestaurant)
-      .then(requestRestaurantDetails)
-      .then(restaurant => Promise.all([
-        restaurant, requestRestaurantDistance(restaurant, coordinates)
+      .then(this.checkIfCurrentliquor_store)
+      .then(requestliquor_storeDetails)
+      .then(liquor_store => Promise.all([
+        liquor_store, requestCurrentLocation.Name(liquor_store, coordinates)
       ]))
-      .then(data => this.setRestaurantData(...data))
+      .then(data => this.setPlace.Field.NAME(...data))
       .catch(error => {
         if (error === ERRORS.SEARCH_AGAIN) {
-          return this.getRandomRestaurantNearby();
+          return this.getRandomliquor_storeNearby();
         }
 
         if (error === ERRORS.NO_RESULTS) {
@@ -92,7 +92,7 @@ class App extends Component {
       });
   }
 
-  getRandomRestaurantNearby() {
+  getRandomliquor_storeNearby() {
     this.setState({
       isGenericError: false,
       isLocationError: false,
@@ -100,7 +100,7 @@ class App extends Component {
     });
 
     requestCurrentLocation()
-      .then(this.requestRandomRestaurant)
+      .then(this.requestRandomliquor_store)
       .catch(() => {
         this.setState({
           isGettingLocation: false,
@@ -111,7 +111,7 @@ class App extends Component {
 
   getCurrentView() {
     const {
-      isGenericError, isLocationError, areNoResults, isFetchingData, isGettingLocation, restaurant
+      isGenericError, isLocationError, areNoResults, isFetchingData, isGettingLocation, liquor_store
     } = this.state;
 
     if (isGenericError) {
@@ -147,7 +147,7 @@ class App extends Component {
         <ErrorView
           iconName="explore"
           title="No results"
-          text="Sorry, there are no restaurants nearby"
+          text="Sorry, there are no Parks nearby"
         />
       );
     }
@@ -160,24 +160,24 @@ class App extends Component {
       );
     }
 
-    if (restaurant) {
+    if (liquor_store) {
       return (
-        <RestaurantView
-          {...restaurant}
+        <liquor_storeView
+          {...liquor_store}
         />
       );
     }
 
     return (
       <WelcomeView
-        handleStart={this.getRandomRestaurantNearby}
+        handleStart={this.getRandomliquor_storeNearby}
       />
     );
   }
 
   render() {
     const {
-      restaurant, isFetchingData, isGettingLocation, isLocationError, areNoResults
+      liquor_store, isFetchingData, isGettingLocation, isLocationError, areNoResults
     } = this.state;
 
     return (
@@ -186,10 +186,10 @@ class App extends Component {
       >
         <Header
           showRefreshButton={
-            (!!restaurant && !isFetchingData && !isGettingLocation) ||
+            (!!liquor_store && !isFetchingData && !isGettingLocation) ||
             areNoResults || isLocationError
           }
-          handleRefresh={this.getRandomRestaurantNearby}
+          handleRefresh={this.getRandomliquor_storeNearby}
         />
 
         {this.getCurrentView()}

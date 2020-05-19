@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from './Icon';
 
 const WelcomeView = ({ handleStart }) => (
   <main
@@ -13,14 +12,14 @@ const WelcomeView = ({ handleStart }) => (
       <div
         className="simple-view__title"
       >
-        <Icon
+        {/* <Icon
           className="simple-view__title__icon"
-          name="restaurant"
-        />
+          name="Liquor"
+        /> */}
         <h1
           className="simple-view__title__text"
         >
-          Welcome
+          Local Liq's
         </h1>
       </div>
 
@@ -30,23 +29,23 @@ const WelcomeView = ({ handleStart }) => (
         <p
           className="simple-view__body__text"
         >
-          Press below to search for a random restaurant nearby
+          Press below to search for a random Liquor nearby
         </p>
 
         <button
           className="simple-view__body__button"
           onClick={handleStart}
         >
-          Chow Now 
+          Pick your Liquor Store!! 
         </button>
       </div>
     </div>
 
     <a
       className="simple-view__footer"
-      href="http://roundtownchow.netlify.com"
+
     >
-      Made by Iseanee DeShazer
+   Completed by Yessenia Pena
     </a>
   </main>
 );

@@ -11,7 +11,7 @@ const Header = ({ showRefreshButton, handleRefresh }) => (
       <h1
         className="header__content__title"
       >
-        'Round Town Chow
+        'Random Liquor Store Generator
       </h1>
 
       {showRefreshButton &&

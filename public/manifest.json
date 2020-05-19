@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Lunchroulette",
-  "description": "Search for random restaurants nearby",
+  "description": "Search for random liquor_store nearby",
   "lang": "en-US",
   "launch_path": "/index.html",
   "scope": "/",

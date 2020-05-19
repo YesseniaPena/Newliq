@@ -2,25 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Icon from './Icon';
+import liquor_storeViewHeader from './liquor_storeViewHeader';
 
-const RestaurantViewDetails = ({
+const liquor_storetViewDetails = ({
   address, phone, websiteUrl, googlePageUrl, distanceInTime, distanceInSpace
 }) => (
   <div
-    className="restaurant__details"
+    className="liquor_store__details"
   >
     <div
-      className="restaurant__details--top"
+      className="liquor_store__details--top"
     >
       <div
-        className="restaurant__details__item"
+        className="liquor_store__details__item"
       >
         <Icon
-          className="restaurant__details__item__icon"
+          className="liquor_store__details__item__icon"
           name="location_on"
         />
         <div
-          className="restaurant__details__item__text"
+          className="liquor_store__details__item__text"
         >
           {address}
         </div>
@@ -28,14 +29,14 @@ const RestaurantViewDetails = ({
 
       { phone &&
         <div
-          className="restaurant__details__item"
+          className="liquor_store__details__item"
         >
           <Icon
-            className="restaurant__details__item__icon"
+            className="liquor_store__details__item__icon"
             name="phone"
           />
           <a
-            className="restaurant__details__item__text"
+            className="liquor_store__details__item__text"
             href={`tel:${phone.replace(/ /g,'')}`}
           >
             {phone}
@@ -45,14 +46,14 @@ const RestaurantViewDetails = ({
 
       { websiteUrl &&
         <div
-          className="restaurant__details__item"
+          className="liquor_store__details__item"
         >
           <Icon
-            className="restaurant__details__item__icon"
+            className="liquor_store__details__item__icon"
             name="link"
           />
           <a
-            className="restaurant__details__item__text"
+            className="liquor_store__details__item__text"
             href={websiteUrl}
           >
             {websiteUrl}
@@ -63,18 +64,18 @@ const RestaurantViewDetails = ({
 
     { distanceInTime && distanceInSpace &&
       <a
-        className="restaurant__details--bottom"
+        className="liquor_store__details--bottom"
         href={googlePageUrl}
       >
         <div
-          className="restaurant__details__item"
+          className="liquor_store__details__item"
         >
           <Icon
-            className="restaurant__details__item__icon"
+            className="liquor_store__details__item__icon"
             name="directions_walk"
           />
           <div
-            className="restaurant__details__item__text"
+            className="liquor_store__details__item__text"
           >
             {distanceInTime} ({distanceInSpace})
           </div>
@@ -84,7 +85,7 @@ const RestaurantViewDetails = ({
   </div>
 );
 
-RestaurantViewDetails.propTypes = {
+liquor_storeViewHeader.propTypes = {
   address: PropTypes.string.isRequired,
   phone: PropTypes.string,
   websiteUrl: PropTypes.string,
@@ -93,4 +94,4 @@ RestaurantViewDetails.propTypes = {
   distanceInSpace: PropTypes.string
 }
 
-export default RestaurantViewDetails;
+export default liquor_storeViewHeader;

@@ -46,7 +46,7 @@ a {
   width: 100%;
   height: 3.5rem;
   color: #FFFFFF;
-  background-color: Orange;
+  background-color: pink;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -146,7 +146,7 @@ a {
   border: none;
   text-transform: uppercase;
   font-weight: 600;
-  color: orange;
+  color: yellow;
   padding: 1rem;
   cursor: pointer;
 }
@@ -164,12 +164,12 @@ a {
 }
 
 
-/* Restaurant */
-.restaurant {
+/* Liquor Store */
+.liquor.store {
   max-width: 800px;
 }
 
-.restaurant__header {
+.liquor_store__header {
   width: 100%;
   height: 20vh;
   min-height: 40vh;
@@ -182,7 +182,7 @@ a {
   animation: fade-in 0.5s ease-out forwards;
 }
 
-.restaurant__header__summary {
+.liquor_store__header__summary {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -191,16 +191,16 @@ a {
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
 }
 
-.restaurant__header__summary > * {
+.liquor_store__header__summary > * {
   margin-left: 1.2rem;
   margin-right: 1.2rem;
 }
 
-.restaurant__header__summary > *:last-child {
+.liquor_store__header__summary > *:last-child {
   margin-bottom: 1.2rem;
 }
 
-.restaurant__header__summary__title {
+.liquor_store__header__summary__title {
   color: #FFFFFF;
   font-weight: 400;
   text-shadow: 0 0 0.2em black;
@@ -210,8 +210,8 @@ a {
   animation: slide-in-and-fade 0.3s ease-out 0.4s forwards;
 }
 
-.restaurant__header__summary__rating {
-  color: #FF9800;
+.liquor_store__header__summary__rating {
+  color: pink;
   display: flex;
   align-items: center;
   transform: translateY(20%);
@@ -219,12 +219,12 @@ a {
   animation: slide-in-and-fade 0.3s ease-out 0.4s forwards;
 }
 
-.restaurant__header__summary__rating__value {
+.liquor_store__header__summary__rating__value {
   margin: -0.05em 0.5em 0 0.1em;
 }
 
 
-.restaurant__details {
+.liquor_store__details {
   flex: 1 0 auto;
   width: 100%;
   background-color: #FFFFFF;
@@ -233,57 +233,57 @@ a {
   justify-content: space-between;
 }
 
-.restaurant__details--top {
+.liquor_store__details--top {
   padding: 1.2rem;
 }
 
-.restaurant__details--bottom {
+.liquor_store__details--bottom {
   padding: 0.6rem 1.2rem;
   background-color: #607D8B;
   text-decoration: none;
 }
 
-.restaurant__details--bottom * {
+.liquor_store__details--bottom * {
   cursor: pointer;
 }
 
-.restaurant__details__item {
+.liquor_store__details__item {
   display: flex;
   align-items: center;
 }
 
-.restaurant__details--top .restaurant__details__item {
+.liquor_store__details--top .liquor_store__details__item {
   transform: translateY(20%);
   opacity: 0;
   animation: slide-in-and-fade 0.3s ease-out 0.5s forwards;
 }
 
-.restaurant__details__item__text {
+.liquor_store__details__item__text {
   padding: 0.8em;
   line-height: 1.4em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.restaurant__details__item__icon {
+.liquor_store__details__item__icon {
   margin-top: -0.05em;
 }
 
-.restaurant__details--top .restaurant__details__item__icon {
+.liquor_store__details--top .restaurant__details__item__icon {
   color: #1E88E5;
 }
 
-.restaurant__details--bottom {
+.liquor_store__details--bottom {
   transform: translateY(100%);
   animation: slide-in 0.3s ease-out 1s forwards;
 }
 
-.restaurant__details--bottom .restaurant__details__item__icon {
+.liquor_store__details--bottom .liquor_store__details__item__icon {
   margin-top: -0.1em;
 }
 
-.restaurant__details--bottom .restaurant__details__item__text,
-.restaurant__details--bottom .restaurant__details__item__icon {
+.liquor_store__details--bottom .liquor_store__details__item__text,
+.liquor_store__details--bottom .liquor_store__details__item__icon {
   color: #FFFFFF;
 }
 
@@ -360,31 +360,31 @@ a {
     font-size: 16px;
   }
 
-  .restaurant__header__summary > * {
+  .liquor_store__header__summary > * {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
 
-  .restaurant__header__summary > *:last-child {
+  .liquor_store__header__summary > *:last-child {
     margin-bottom: 1.5rem;
   }
 
-  .restaurant__details--top {
+  .liquor_store__details--top {
     padding: 1.5em;
   }
 }
 
 @media (min-width: 700px) {
-  .restaurant__header__summary > * {
+  .liquor_store__header__summary > * {
     margin-left: 2rem;
     margin-right: 2rem;
   }
 
-  .restaurant__header__summary > *:last-child {
+  .liquor_store__header__summary > *:last-child {
     margin-bottom: 2rem;
   }
 
-  .restaurant__details--top {
+  .liquor_store__details--top {
     padding: 2em;
   }
 }
